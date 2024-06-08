@@ -14,7 +14,11 @@ word_bank = ['apple', 'ball', 'cat', 'duck', 'eggshell', 'football', 'garden',
 'waterfall', 'xylophone', 'yoyo', 'zoologist', 'always', 'before', 'chapel',
 'dragon', 'electricity', 'fudge', 'game', 'heart', 'ice', 'jersey', 'kitten',
 'lightbulb', 'monsoon', 'nut', 'octagon', 'pretend', 'quick', 'ready',
-'smooth', 'train', 'unbelievable', 'van', 'wheel', 'xray', 'yard', 'zip']
+'smooth', 'train', 'unbelievable', 'van', 'wheel', 'xray', 'yard', 'zip',
+'abacus', 'blackboard', 'chalk', 'dusty', 'emoji', 'flamingo', 'goblin',
+'halloween', 'island', 'joker', 'ketchup', 'lookalike', 'magic', 'newspaper',
+'office', 'priest', 'qualify', 'rabbit', 'shop', 'turtle', 'uncle', 'video',
+'wagon', 'xbox', 'yoghurt', 'zero']
 
 
 # def get_random_word():
