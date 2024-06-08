@@ -1,3 +1,4 @@
+import random 
 # Your code goes here.
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
@@ -21,10 +22,13 @@ word_bank = ['apple', 'ball', 'cat', 'duck', 'eggshell', 'football', 'garden',
 'wagon', 'xbox', 'yoghurt', 'zero']
 
 
-# def get_random_word():
-""" 
-A function to get a random word from the word bank
-"""
+def get_random_word(word_bank):
+    """ 
+    A function to get a random word from the word bank
+    """
+    random_word = random.choice(word_bank)
+    #print(random_word)
+    return random_word
 
 # def dashes_for_words():
 """ 
@@ -42,3 +46,5 @@ print("Welcome to Hangman")
 
 # print(word_bank[2])
 # print(word_bank[-34])
+
+get_random_word(word_bank)
