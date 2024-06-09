@@ -39,7 +39,15 @@ def dashes_for_words():
     print('_' * len(get_random_word(word_bank)))
 
 # A function to allow a user to guess a letter
+def get_user_guess():
+    """
+    A function to ask user to guess a letter
+    """
+    user_guess = input('Guess a letter: \n').upper()
+    print(user_guess)
 
+    if len(user_guess) > 1:
+        print('Please enter just one letter')
 
 """ 
 Welcome the user to Hangman
@@ -51,3 +59,4 @@ print("Welcome to Hangman")
 
 dashes_for_words()
 # get_random_word(word_bank)
+get_user_guess()
