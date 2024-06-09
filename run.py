@@ -43,11 +43,23 @@ def get_user_guess():
     """
     A function to ask user to guess a letter
     """
-    user_guess = input('Guess a letter: \n').upper()
-    print(user_guess)
+    # user_guess = input('Guess a letter: \n').upper()
+    # print(user_guess)
 
-    if len(user_guess) > 1:
-        print('Please enter just one letter')
+    while True:
+
+        user_guess = input('Guess a letter: \n').upper()
+        print(user_guess)
+
+        if not user_guess.isalpha():
+            print('Please enter a letter')
+            continue
+
+        if len(user_guess) > 1:
+            print('Please enter just one letter')
+            continue
+
+        break
 
 """ 
 Welcome the user to Hangman
