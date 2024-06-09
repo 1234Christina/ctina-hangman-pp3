@@ -48,8 +48,10 @@ def get_user_guess():
 
     while True:
 
-        user_guess = input('Guess a letter: \n').upper()
-        print(user_guess)
+        user_guess = input('Type your guess here: \n').upper()
+        # print(user_guess)
+        print(f'You guessed {user_guess}')
+        print('Checking answer...')
 
         if not user_guess.isalpha():
             print('Please enter a letter')
@@ -64,7 +66,8 @@ def get_user_guess():
 """ 
 Welcome the user to Hangman
 """
-print("Welcome to Hangman")
+user_name = input('To Begin please enter your name: \n')
+print(f"Welcome to Hangman {user_name}! \nHere is your first word:")
 
 # print(word_bank[2])
 # print(word_bank[-34])
