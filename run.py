@@ -27,14 +27,16 @@ def get_random_word(word_bank):
     A function to get a random word from the word bank
     """
     random_word = random.choice(word_bank)
-    #print(random_word)
+    # print(random_word)
     return random_word
 
-# def dashes_for_words():
-""" 
-A function to print dashes for the number of letters 
-in the randomly chosen word
-"""
+def dashes_for_words():
+    """ 
+    A function to print dashes for the number of letters 
+    in the randomly chosen word
+    """
+    
+    print('_' * len(get_random_word(word_bank)))
 
 # A function to allow a user to guess a letter
 
@@ -47,4 +49,5 @@ print("Welcome to Hangman")
 # print(word_bank[2])
 # print(word_bank[-34])
 
-get_random_word(word_bank)
+dashes_for_words()
+# get_random_word(word_bank)
