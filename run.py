@@ -31,21 +31,59 @@ def get_random_word(word_bank):
     # print(random_word)
     return random_word
 
-def dashes_for_words():
+def dashes_for_words(random_word):
     """ 
     A function to print dashes for the number of letters 
     in the randomly chosen word
     """
     
-    print('_' * len(get_random_word(word_bank)))
+    print('_' * len(random_word))
 
 # A function to allow a user to guess a letter
-def get_user_guess():
+# def get_user_guess():
+#     """
+#     A function to ask user to guess a letter
+#     """
+#     return user_guess
+
+
+def check_guess():
     """
-    A function to ask user to guess a letter
+    Find out if users guessed letter is in the word and give feedback
     """
-    # user_guess = input('Guess a letter: \n').upper()
-    # print(user_guess)
+    # current_word = get_random_word(word_bank)
+    # guessed_letter = get_user_guess()
+
+    if guessed_letter in current_word:
+        print('You guessed a correct letter!')
+    else:
+        print('Try again')
+
+""" 
+Welcome the user to Hangman
+"""
+user_name = input('To Begin please enter your name: \n')
+print(f"Welcome to Hangman {user_name}! \nHere is your first word:")
+
+
+# print(word_bank[2])
+# print(word_bank[-34])
+# print(word_bank[-32])
+# print(word_bank[42])
+# print(word_bank[12])
+
+# dashes_for_words()
+# get_random_word(word_bank)
+# get_user_guess()
+# check_guess()
+
+def main():
+    """
+    A function to run all game functions
+    """
+    current_word = get_random_word(word_bank)
+    print(current_word)
+    dashes_for_words(current_word)
 
     while True:
 
@@ -64,36 +102,8 @@ def get_user_guess():
 
         break
 
-    return user_guess
 
+    guessed_letter = user_guess
+    check_guess()
 
-def check_guess():
-    """
-    
-    """
-    current_word = get_random_word(word_bank)
-    guessed_letter = get_user_guess()
-
-    if guessed_letter in current_word:
-        print('You guessed a correct letter!')
-    else:
-        print('Try again')
-
-""" 
-Welcome the user to Hangman
-"""
-user_name = input('To Begin please enter your name: \n')
-print(f"Welcome to Hangman {user_name}! \nHere is your first word:")
-dashes_for_words()
-
-
-# print(word_bank[2])
-# print(word_bank[-34])
-# print(word_bank[-32])
-# print(word_bank[42])
-# print(word_bank[12])
-
-# dashes_for_words()
-# get_random_word(word_bank)
-# get_user_guess()
-check_guess()
+main()
