@@ -54,6 +54,9 @@ def check_guess():
     # current_word = get_random_word(word_bank)
     # guessed_letter = get_user_guess()
 
+    print('LINE 57', guessed_letters)
+    guessed_letter = guessed_letters.pop()
+
     if guessed_letter in current_word:
         print('You guessed a correct letter!')
     else:
@@ -103,7 +106,13 @@ def main():
         break
 
 
-    guessed_letter = user_guess
+    global guessed_letters
+    guessed_letters = []
+    guessed_letters.append(user_guess)
+    print('LINE 111', guessed_letters)
+
+    # guessed_letter = guessed_letters.pop()
+    print(guessed_letter)
     check_guess()
 
 main()
