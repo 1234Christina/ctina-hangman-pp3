@@ -63,15 +63,33 @@ def get_user_guess():
 
         break
 
+    return user_guess
+
+
+def check_guess():
+    """
+    
+    """
+    current_word = get_random_word(word_bank)
+    guessed_letter = get_user_guess()
+
+    if guessed_letter in current_word:
+        print('You guessed a correct letter!')
+    else:
+        print('Try again')
+
 """ 
 Welcome the user to Hangman
 """
 user_name = input('To Begin please enter your name: \n')
 print(f"Welcome to Hangman {user_name}! \nHere is your first word:")
+dashes_for_words()
+
 
 # print(word_bank[2])
 # print(word_bank[-34])
 
-dashes_for_words()
+# dashes_for_words()
 # get_random_word(word_bank)
-get_user_guess()
+# get_user_guess()
+check_guess()
