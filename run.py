@@ -35,9 +35,12 @@ def check_guess():
     print('guessed letter:', guessed_letter)
 
     if guessed_letter in current_word:
-        print('You guessed a correct letter!')
-    else:
-        print('Try again')
+        print('You guessed a correct letter! Keep going!')
+
+    if guessed_letter not in current_word:
+        print('incorrect letter...')
+        print('hangman drawing here')
+        
     
 
 # """ 
