@@ -10,8 +10,8 @@ def get_random_word(word_bank):
     """ 
     A function to get a random word from the word bank
     """
-    random_word = random.choice(word_bank)
-    # print(random_word)
+    random_word = random.choice(word_bank).upper()
+    print('CAPITAL RANDOM WORD:', random_word)
     return random_word
 
 def dashes_for_words(random_word):
