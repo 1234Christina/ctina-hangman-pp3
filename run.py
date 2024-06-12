@@ -1,26 +1,9 @@
 import random 
 from hangmanwords import word_bank
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
 
 """ 
 Hangman Game Project for PP3
 """
-
-# # A word bank from which the words will be chosen randomly
-# # for the user to guess
-# word_bank = ['apple', 'ball', 'cat', 'duck', 'eggshell', 'football', 'garden',
-# 'harp', 'icecream', 'jam', 'king', 'library', 'museum', 'nutella', 'ocean',
-# 'playground', 'queen', 'race', 'snake', 'tea', 'under', 'vulture',
-# 'waterfall', 'xylophone', 'yoyo', 'zoologist', 'always', 'before', 'chapel',
-# 'dragon', 'electricity', 'fudge', 'game', 'heart', 'ice', 'jersey', 'kitten',
-# 'lightbulb', 'monsoon', 'nut', 'octagon', 'pretend', 'quick', 'ready',
-# 'smooth', 'train', 'unbelievable', 'van', 'wheel', 'xray', 'yard', 'zip',
-# 'abacus', 'blackboard', 'chalk', 'dusty', 'emoji', 'flamingo', 'goblin',
-# 'halloween', 'island', 'joker', 'ketchup', 'lookalike', 'magic', 'newspaper',
-# 'office', 'priest', 'qualify', 'rabbit', 'shop', 'turtle', 'uncle', 'video',
-# 'wagon', 'xbox', 'yoghurt', 'zero']
 
 
 def get_random_word(word_bank):
@@ -38,13 +21,6 @@ def dashes_for_words(random_word):
     """
     
     print('_' * len(random_word))
-
-# A function to allow a user to guess a letter
-# def get_user_guess():
-#     """
-#     A function to ask user to guess a letter
-#     """
-#     return user_guess
 
 
 def check_guess():
@@ -71,17 +47,6 @@ Welcome the user to Hangman
 user_name = input('To Begin please enter your name: \n')
 print(f"Welcome to Hangman {user_name}! \nHere is your first word:")
 
-
-# print(word_bank[2])
-# print(word_bank[-34])
-# print(word_bank[-32])
-# print(word_bank[42])
-# print(word_bank[12])
-
-# dashes_for_words()
-# get_random_word(word_bank)
-# get_user_guess()
-# check_guess()
 
 def main():
     """
@@ -117,14 +82,9 @@ def main():
         break
 
 
-    # global guessed_letters
-    # guessed_letters = []
     guessed_letters.append(user_guess)
     # print('LINE 119', guessed_letters)
 
-
-    # guessed_letter = guessed_letters.pop()
-    # print(guessed_letter)
     check_guess()
 
 main()
