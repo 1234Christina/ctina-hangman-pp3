@@ -40,18 +40,23 @@ def check_guess():
         print('Try again')
     
 
-
-""" 
-Welcome the user to Hangman
-"""
-user_name = input('To Begin please enter your name: \n')
-print(f"Welcome to Hangman {user_name}! \nHere is your first word:")
+# """ 
+# Welcome the user to Hangman
+# """
+# user_name = input('To Begin please enter your name: \n')
+# print(f"Welcome to Hangman {user_name}! \nHere is your first word:")
 
 
 def main():
     """
     A function to run all game functions
     """
+
+    # Welcome the user to Hangman
+
+    user_name = input('To Begin please enter your name: \n').upper()
+    print(f"Welcome to Hangman {user_name}! \nHere is your first word:")
+
     global guessed_letters
     guessed_letters = []
     
@@ -83,7 +88,6 @@ def main():
 
 
     guessed_letters.append(user_guess)
-    # print('LINE 119', guessed_letters)
 
     check_guess()
 
