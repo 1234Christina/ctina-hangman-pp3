@@ -21,6 +21,30 @@ def dashes_for_words(random_word):
     """
     print('_' * len(random_word))
 
+# def get_user_guess():
+
+#     while True:
+
+#         user_guess = input('Type your guess here: \n').strip().upper()
+#         # print(user_guess)
+#         print(f'You guessed {user_guess}')
+#         print('')
+#         print('Checking answer...')
+
+#         if not user_guess.isalpha():
+#             print('Please enter a letter')
+#             continue
+
+#         if len(user_guess) > 1:
+#             print('Please enter just one letter')
+#             continue
+
+#         if user_guess in guessed_letters:
+#             print('You have already guessed that letter, try again!')
+#             continue
+
+#         break
+
 def check_guess():
     """
     Find out if users guessed letter is in the word and give feedback
@@ -37,6 +61,9 @@ def check_guess():
 
         # Reveal the word, with dashes and correctly guessed letters
         print('')
+
+        # Get the users input again 
+
 
     if guessed_letter not in current_word:
         print('Keep Trying!')
@@ -62,11 +89,14 @@ def main():
     print('CURRENT_WORD:', current_word)
     dashes_for_words(current_word)
 
+    # Should this while loop be inside a function?
+
     while True:
 
         user_guess = input('Type your guess here: \n').strip().upper()
         # print(user_guess)
         print(f'You guessed {user_guess}')
+        print('')
         print('Checking answer...')
 
         if not user_guess.isalpha():
