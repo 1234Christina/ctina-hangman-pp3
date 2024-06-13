@@ -1,4 +1,4 @@
-import random 
+import random  # Better to use this or a random index from word bank list?
 from hangmanwords import word_bank
 
 """ 
@@ -19,7 +19,6 @@ def dashes_for_words(random_word):
     A function to print dashes for the number of letters 
     in the randomly chosen word
     """
-    
     print('_' * len(random_word))
 
 def check_guess():
@@ -30,15 +29,20 @@ def check_guess():
     # guessed_letter = get_user_guess()
 
     print('LIST of guessed letters:', guessed_letters)
-    guessed_letter = guessed_letters.pop()
+    guessed_letter = guessed_letters[-1]
     print('guessed letter:', guessed_letter)
 
     if guessed_letter in current_word:
-        print('You guessed a correct letter! Keep going!')
+        print('You guessed a correct letter! Well done!')
+
+        # Reveal the word, with dashes and correctly guessed letters
+        print('')
 
     if guessed_letter not in current_word:
-        print('incorrect letter...')
-        print('hangman drawing here')       
+        print('Keep Trying!')
+
+        # Add the hangman drawing here
+        print('Add the hangman drawing here')       
 
 def main():
     """
