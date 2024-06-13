@@ -5,11 +5,11 @@ from hangmanwords import word_bank
 Hangman Game Project for PP3
 """
 
-
 def get_random_word(word_bank):
     """ 
     A function to get a random word from the word bank
     """
+    global random_word
     random_word = random.choice(word_bank).upper()
     print('CAPITAL RANDOM WORD:', random_word)
     return random_word
@@ -21,7 +21,6 @@ def dashes_for_words(random_word):
     """
     
     print('_' * len(random_word))
-
 
 def check_guess():
     """
@@ -39,16 +38,7 @@ def check_guess():
 
     if guessed_letter not in current_word:
         print('incorrect letter...')
-        print('hangman drawing here')
-        
-    
-
-# """ 
-# Welcome the user to Hangman
-# """
-# user_name = input('To Begin please enter your name: \n')
-# print(f"Welcome to Hangman {user_name}! \nHere is your first word:")
-
+        print('hangman drawing here')       
 
 def main():
     """
@@ -65,7 +55,7 @@ def main():
     
     global current_word
     current_word = get_random_word(word_bank)
-    # print(current_word)
+    print('CURRENT_WORD:', current_word)
     dashes_for_words(current_word)
 
     while True:
@@ -88,7 +78,6 @@ def main():
             continue
 
         break
-
 
     guessed_letters.append(user_guess)
 
