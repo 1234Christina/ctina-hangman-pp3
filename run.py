@@ -45,12 +45,10 @@ def dashes_for_words(random_word):
 
 #         break
 
-def check_guess():
+def check_guess(word, guessed_letter):
     """
     Find out if users guessed letter is in the word and give feedback
     """
-    # current_word = get_random_word(word_bank)
-    # guessed_letter = get_user_guess()
 
     print('LIST of guessed letters:', guessed_letters)
     guessed_letter = guessed_letters[-1]
@@ -89,32 +87,35 @@ def main():
     print('CURRENT_WORD:', current_word)
     dashes_for_words(current_word)
 
-    # Should this while loop be inside a function?
+    keep_playing = True
+    while keep_playing:
 
-    while True:
+        while True:
+            """ User inputs their guess and this input is validated """
 
-        user_guess = input('Type your guess here: \n').strip().upper()
-        # print(user_guess)
-        print(f'You guessed {user_guess}')
-        print('')
-        print('Checking answer...')
+            user_guess = input('Type your guess here: \n').strip().upper()
+            # print(user_guess)
+            print(f'You guessed {user_guess}')
+            print('')
+            print('Checking answer...')
 
-        if not user_guess.isalpha():
-            print('Please enter a letter')
-            continue
+            if not user_guess.isalpha():
+                print('Please enter a letter')
+                continue
 
-        if len(user_guess) > 1:
-            print('Please enter just one letter')
-            continue
+            if len(user_guess) > 1:
+                print('Please enter just one letter')
+                continue
 
-        if user_guess in guessed_letters:
-            print('You have already guessed that letter, try again!')
-            continue
+            if user_guess in guessed_letters:
+                print('You have already guessed that letter, try again!')
+                continue
 
-        break
+            break
 
-    guessed_letters.append(user_guess)
+        guessed_letters.append(user_guess)
+        return True
 
-    check_guess()
-
+    guess_is_correct = check_guess(current_word, user_guess) # Must use the letter and word now
+    keep_playing = False
 main()
