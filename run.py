@@ -14,36 +14,18 @@ def get_random_word(word_bank):
     print('CAPITAL RANDOM WORD:', random_word)
     return random_word
 
-def dashes_for_words(random_word):
+def dashes_for_words(random_word, letters_to_reveal):
     """ 
     A function to print dashes for the number of letters 
     in the randomly chosen word
     """
-    print('_' * len(random_word))
 
-# def get_user_guess():
+    for letter in random_word:
+        if letter in letters_to_reveal:
+            print(letter.upper() + ' ', end= ' ')
 
-#     while True:
-
-#         user_guess = input('Type your guess here: \n').strip().upper()
-#         # print(user_guess)
-#         print(f'You guessed {user_guess}')
-#         print('')
-#         print('Checking answer...')
-
-#         if not user_guess.isalpha():
-#             print('Please enter a letter')
-#             continue
-
-#         if len(user_guess) > 1:
-#             print('Please enter just one letter')
-#             continue
-
-#         if user_guess in guessed_letters:
-#             print('You have already guessed that letter, try again!')
-#             continue
-
-#         break
+        else:
+            print('_ ', end='')
 
 def check_guess(word, guessed_letter):
     """
@@ -61,13 +43,11 @@ def check_guess(word, guessed_letter):
         print('')
 
         # Get the users input again 
-
-
-    if guessed_letter not in current_word:
+    else:
         print('Keep Trying!')
 
         # Add the hangman drawing here
-        print('Add the hangman drawing here')       
+        print('Add the hangman drawing here')    
 
 def main():
     """
@@ -85,7 +65,9 @@ def main():
     global current_word
     current_word = get_random_word(word_bank)
     print('CURRENT_WORD:', current_word)
-    dashes_for_words(current_word)
+
+    letters_to_reveal = 'c,a,t'
+    dashes_for_words(current_word, letters_to_reveal)
 
     keep_playing = True
     while keep_playing:
@@ -113,9 +95,11 @@ def main():
 
             break
 
-        guessed_letters.append(user_guess)
+        # guessed_letters.append(user_guess)
         return True
+    
+        guessed_letters.append(user_guess)
 
     guess_is_correct = check_guess(current_word, user_guess) # Must use the letter and word now
-    keep_playing = False
+    # keep_playing = False
 main()
