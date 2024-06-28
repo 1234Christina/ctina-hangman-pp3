@@ -56,10 +56,22 @@ def check_guess():
 
 def show_letters(guess, word):
     #Use the returned guessed letter to start displaying right letters in the word
-    if guess in word:
-            print('You guessed a correct letter! Well done!')
+    keep_playing = True
+    while keep_playing:
+
+        if guess in word:
+                print('You guessed a correct letter! Well done!')
+        else:
+                print('Keep Trying!')
+        break
+
+def play():
+    keep_trying = input('Do you want to keep trying? Type Y or N: \n').strip().upper()
+    if keep_trying == 'N':
+        print('Thank you for playing!')
+        return False
     else:
-            print('Keep Trying!')
+        check_guess()
 
 def main():
     """
@@ -73,5 +85,5 @@ def main():
     dashes_for_words(current_word)
     guessed_letter = check_guess()
     show_letters(guessed_letter, current_word)
-
+    keep_playing = play()
 main()
