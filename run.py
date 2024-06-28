@@ -60,22 +60,22 @@ def check_guess(word):
         break
 
 
-    print('LIST of guessed letters:', guessed_letters)
-    guessed_letter = guessed_letters[-1]
-    print('guessed letter:', guessed_letter)
+    # print('LIST of guessed letters:', guessed_letters)
+    # guessed_letter = guessed_letters[-1]
+    # print('guessed letter:', guessed_letter)
 
-    if guessed_letter in current_word:
-        print('You guessed a correct letter! Well done!')
+    # if guessed_letter in current_word:
+    #     print('You guessed a correct letter! Well done!')
 
-        # Reveal the word, with dashes and correctly guessed letters
-        print('')
+    #     # Reveal the word, with dashes and correctly guessed letters
+    #     print('')
 
-        # Get the users input again 
-    else:
-        print('Keep Trying!')
+    #     # Get the users input again 
+    # else:
+    #     print('Keep Trying!')
 
-        # Add the hangman drawing here
-        print('Add the hangman drawing here')    
+    #     # Add the hangman drawing here
+    #     print('Add the hangman drawing here')    
 
 def main():
     """
