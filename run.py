@@ -54,9 +54,12 @@ def check_guess():
 
     return guessed_letter
 
-def function():
+def show_letters(guess, word):
     #Use the returned guessed letter to start displaying right letters in the word
-    print('new function')
+    if guess in word:
+            print('You guessed a correct letter! Well done!')
+    else:
+            print('Keep Trying!')
 
 def main():
     """
@@ -68,6 +71,7 @@ def main():
 
     current_word = get_random_word(word_bank)
     dashes_for_words(current_word)
-    check_guess()
+    guessed_letter = check_guess()
+    show_letters(guessed_letter, current_word)
 
 main()
