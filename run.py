@@ -1,12 +1,13 @@
-import random 
+import random
 from hangmanwords import word_bank
 
-""" 
+"""
 Hangman Game Project for PP3
 """
 
+
 def get_random_word(word_bank):
-    """ 
+    """
     A function to get a random word from the word bank
     """
     random_word = random.choice(word_bank).upper()
@@ -15,16 +16,18 @@ def get_random_word(word_bank):
 
 
 def dashes_for_words(word):
-    """ 
-    A function to print dashes for the number of letters 
+    """
+    A function to print dashes for the number of letters
     in the randomly chosen word
     """
     print('_ ' * len(word))
 
+
 def check_guess():
     """
     User inputs their guess and this input is validated
-    Check if users guessed letter is in the word and give feedback 
+    Check if users guessed letter is in the word and give
+    feedback
     """
     guessed_letters = []
     user_guess = input('Type your guess here: \n').strip().upper()
@@ -32,9 +35,9 @@ def check_guess():
     print(f'You guessed {user_guess}')
     print('')
     print('Checking answer...')
-    
+
     while True:
-        
+
         if not user_guess.isalpha():
             print('Please enter a letter')
             continue
@@ -54,24 +57,28 @@ def check_guess():
 
     return guessed_letter
 
+
 def show_letters(guess, word):
-    #Use the returned guessed letter to start displaying right letters in the word
+    # Use the returned guessed letter to start
+    # displaying right letters in the word
     keep_playing = True
     while keep_playing:
 
         if guess in word:
-                print('You guessed a correct letter! Well done!')
+            print('You guessed a correct letter! Well done!')
         else:
-                print('Keep Trying!')
+            print('Keep Trying!')
         break
 
+
 def play():
-    keep_trying = input('Do you want to keep trying? Type Y or N: \n').strip().upper()
+    keep_trying = input('Keep trying? Type Y or N: \n').strip().upper()
     if keep_trying == 'N':
         print('Thank you for playing!')
         return False
     else:
         check_guess()
+
 
 def main():
     """
@@ -86,4 +93,6 @@ def main():
     guessed_letter = check_guess()
     show_letters(guessed_letter, current_word)
     keep_playing = play()
+
+
 main()
