@@ -39,5 +39,5 @@ The website can be cloned from GitHub pages as follows:
 5. Type git clone, paste in the link, and press Enter to create your local clone.
 
 ## Credits
-+ Initial set-up and deployment was copied from Love Sandwiches Walkthrough project.
++ Initial set-up and deployment was copied from the Love Sandwiches Walkthrough project.
 + The hangman drawing file was borrowed from [this repository](https://github.com/kying18/hangman/blob/master/hangman_visual.py).
