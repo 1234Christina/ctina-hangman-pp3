@@ -14,7 +14,9 @@ This version was developed in Python. The player is given a word to guess and mu
 ## Testing
 
 ### Validation Testing
++ The game passes when tested on the CI Python Linter.
 
+![Validator test result](/images/validation-result-pp3.png)
 
 ## Deployment
 
@@ -37,3 +39,4 @@ The website can be cloned from GitHub pages as follows:
 5. Type git clone, paste in the link, and press Enter to create your local clone.
 
 ## Credits
++ Initial set-up and deployment was copied from Love Sandwiches Walkthrough project.
