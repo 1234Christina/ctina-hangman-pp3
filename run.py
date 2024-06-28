@@ -54,7 +54,9 @@ def check_guess():
 
     return guessed_letter
 
-#new function
+def function():
+    #Use the returned guessed letter to start displaying right letters in the word
+    print('new function')
 
 def main():
     """
