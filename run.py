@@ -1,5 +1,6 @@
 import random
 from hangmanwords import word_bank
+from hangmandrawing import lives_visual_dict
 
 """
 Hangman Game Project for PP3
