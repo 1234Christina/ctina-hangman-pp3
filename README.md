@@ -40,3 +40,4 @@ The website can be cloned from GitHub pages as follows:
 
 ## Credits
 + Initial set-up and deployment was copied from Love Sandwiches Walkthrough project.
++ The hangman drawing file was borrowed from [this repository](https://github.com/kying18/hangman/blob/master/hangman_visual.py).
