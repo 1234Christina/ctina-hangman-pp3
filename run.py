@@ -69,6 +69,7 @@ def show_letters(guess, word):
             print('You guessed a correct letter! Well done!')
         else:
             print('Keep Trying!')
+            print(lives_visual_dict[6])
         break
 
 
